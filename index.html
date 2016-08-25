@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html lang="en" ng-app="myApp">
+
+<head>
+	<meta charset="utf-8">
+	<title>San Diego Top Spots</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+	<header>
+		<h1 class="heading">San Diego's Top Spots</h1>
+	</header>
+		<body ng-controller="HomeController">
+<span class="flex-container" style="width:80%">
+		<table class="flex-item">
+			<thead>
+				<tr>
+					 <td>Name</td>
+					 <td>Description</td>
+					 <td>Location</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="spot in topspots">
+					<td>{{spot.name}}</td>
+					<td>{{spot.description}}</td>
+					<td><a href="https://maps.google.com?q={{spot.location}}">View on Google Maps</a></td>
+				</tr>
+			</tbody>
+		</table>
+</span>				
+			<script src="bower_components/jquery/dist/jquery.js"></script>
+  			<script src="bower_components/angular/angular.js"></script>
+			<script src="home.controller.js"></script>
+		</body>			
+<footer>
+
+</footer>
