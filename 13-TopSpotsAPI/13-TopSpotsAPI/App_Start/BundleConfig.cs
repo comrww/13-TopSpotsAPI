@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace _13_TopSpotsAPI
+namespace _13_TopSpotsAPI.API
 {
     public class BundleConfig
     {

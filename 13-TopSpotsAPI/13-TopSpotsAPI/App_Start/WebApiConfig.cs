@@ -5,15 +5,17 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
-namespace Vehicle.API
-{
+namespace 13-TopSpotsAPI
+
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
+            // Enables CORS
+            var policy = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(policy);
+
             // Web API configuration and services
-            var cors = new EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(cors);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -24,6 +26,7 @@ namespace Vehicle.API
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            // This tells Web API to convert normal case to pascal case
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
         }
     }

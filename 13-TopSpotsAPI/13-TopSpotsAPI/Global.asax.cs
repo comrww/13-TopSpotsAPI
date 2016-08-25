@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
 
-namespace _13_TopSpotsAPI
+namespace 13-TopSpotsAPI
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

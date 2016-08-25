@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace _13_TopSpotsAPI.Models
+namespace 13-TopSpotsAPI.API.Models
 {
     public class TopSpot
     {
-        public string name { get; }
-        public string description { get; }
-        public int location { get; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public double[] Location { get; set; }
     }
 }
